@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="ALL">
+    <appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <ThresholdFilter level="ALL" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d %-5p (%F:%L) - %m%n" />
+        </Console>
+        <File name="DEBUG_FILE" fileName="log/DataExtractor.log" append="false">
+            <PatternLayout pattern="%d %-5p (%F:%L) - %m%n" />
+        </File>
+    </appenders>
+    <loggers>
+        <root level="trace">
+            <appender-ref ref="CONSOLE" />
+            <appender-ref ref="DEBUG_FILE" />
+        </root>
+    </loggers> 
+</configuration>
